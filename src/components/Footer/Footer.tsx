@@ -72,8 +72,9 @@ export default function Footer() {
           <div className={styles.footerLogo}>
             <img src="/logo.png" alt="Goodfoot Academy" className={styles.footerLogoImg} />
             <div className={styles.footerLogoText}>
-              <span className={styles.footerLogoName}>Goodfoot</span>
-              <span className={styles.footerLogoSub}>Ballet Dance & Music Academy</span>
+              <span className={styles.footerLogoName}>The Little</span>
+              <span className={styles.footerLogoNameBold}>Goodfoot</span>
+              <span className={styles.footerLogoSub}>Dance & Music Academy<sup className={styles.footerLogoTrademark}>®</sup></span>
             </div>
           </div>
           <p className={styles.footerDesc}>
@@ -123,6 +124,16 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link to="/contact" className={`${styles.footerLinkBtn} ${styles.footerLinkBtnPink}`}>
+                Book a Trial
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className={`${styles.footerLinkBtn} ${styles.footerLinkBtnPurple}`}>
+                Our Academy
+              </Link>
+            </li>
           </ul>
         </motion.div>
 
