@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Footprints, Sparkles, Music, Activity, Mic2, Sprout, Trophy } from 'lucide-react'
+import { Footprints, Sparkles, Music, Activity, Mic2, Sprout, Trophy, User, CalendarDays, Banknote } from 'lucide-react'
 import PageHero from '../../components/PageHero/PageHero'
 import styles from './Classes.module.css'
 
@@ -189,21 +189,21 @@ export default function Classes() {
 
                 <div className={styles.classMeta}>
                   <div className={styles.classMetaItem}>
-                    <span className={styles.metaIcon}>👤</span>
+                    <span className={styles.metaIcon}><User size={16} /></span>
                     <div>
                       <span className={styles.metaLabel}>Age Group</span>
                       <span className={styles.metaValue}>{cls.ageGroup}</span>
                     </div>
                   </div>
                   <div className={styles.classMetaItem}>
-                    <span className={styles.metaIcon}>📅</span>
+                    <span className={styles.metaIcon}><CalendarDays size={16} /></span>
                     <div>
                       <span className={styles.metaLabel}>Schedule</span>
                       <span className={styles.metaValue}>{cls.schedule}</span>
                     </div>
                   </div>
                   <div className={styles.classMetaItem}>
-                    <span className={styles.metaIcon}>💰</span>
+                    <span className={styles.metaIcon}><Banknote size={16} /></span>
                     <div>
                       <span className={styles.metaLabel}>Pricing</span>
                       <span className={styles.metaValue}>{cls.price}</span>

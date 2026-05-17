@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { ZoomIn } from 'lucide-react'
 import PageHero from '../../components/PageHero/PageHero'
 import styles from './Gallery.module.css'
 
@@ -72,7 +73,7 @@ export default function Gallery() {
                 <img src={item.src} alt={item.alt} />
                 <div className={styles.galleryOverlay}>
                   <div className={styles.galleryOverlayContent}>
-                    <span className={styles.galleryOverlayIcon}>🔍</span>
+                    <span className={styles.galleryOverlayIcon}><ZoomIn size={22} /></span>
                     <p className={styles.galleryOverlayTitle}>{item.title}</p>
                     <span className={styles.galleryOverlayCat}>{item.category}</span>
                   </div>

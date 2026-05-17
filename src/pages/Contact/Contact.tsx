@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { MapPin, MessageCircle, Check } from 'lucide-react'
+import { MapPin, MessageCircle, Check, Phone, Mail, Clock } from 'lucide-react'
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa6'
 import PageHero from '../../components/PageHero/PageHero'
 import styles from './Contact.module.css'
 
 const contactInfo = [
-  { icon: '📍', label: 'Address', value: 'Mawanda Rd, Kampala, Uganda' },
-  { icon: '📞', label: 'Phone', value: '0764 335881' },
-  { icon: '💬', label: 'WhatsApp', value: '0764 335881' },
-  { icon: '✉️', label: 'Email', value: 'info@goodfootacademy.ug' },
-  { icon: '🕐', label: 'Hours', value: 'Mon–Fri: 9AM–7PM\nSat–Sun: 10AM–5PM' },
+  { icon: <MapPin size={18} />, label: 'Address', value: 'Mawanda Rd, Kampala, Uganda' },
+  { icon: <Phone size={18} />, label: 'Phone', value: '0764 335881' },
+  { icon: <MessageCircle size={18} />, label: 'WhatsApp', value: '0764 335881' },
+  { icon: <Mail size={18} />, label: 'Email', value: 'info@goodfootacademy.ug' },
+  { icon: <Clock size={18} />, label: 'Hours', value: 'Mon–Fri: 9AM–7PM\nSat–Sun: 10AM–5PM' },
 ]
 
 export default function Contact() {
