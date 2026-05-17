@@ -214,7 +214,7 @@
 .mobileMenu {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   bottom: 0;
   width: 72%;
   max-width: 320px;
@@ -222,7 +222,7 @@
   z-index: 999;
   display: flex;
   flex-direction: row;
-  box-shadow: -8px 0 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 8px 0 40px rgba(0, 0, 0, 0.25);
 }
 
 .mobileMenuInner {

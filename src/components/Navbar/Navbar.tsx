@@ -82,7 +82,7 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu — partial right-side slide-in */}
+      {/* Mobile Menu — partial left-side slide-in */}
       <AnimatePresence>
         {menuOpen && (
           <>
@@ -99,9 +99,9 @@ export default function Navbar() {
             {/* Panel */}
             <motion.div
               className={styles.mobileMenu}
-              initial={{ x: '100%' }}
+              initial={{ x: '-100%' }}
               animate={{ x: 0 }}
-              exit={{ x: '100%' }}
+              exit={{ x: '-100%' }}
               transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
             >
               {/* Nav links area */}
@@ -115,7 +115,7 @@ export default function Navbar() {
                   {navItems.map((item, i) => (
                     <motion.div
                       key={item.path}
-                      initial={{ opacity: 0, x: 20 }}
+                      initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.05 + i * 0.06, duration: 0.35 }}
                     >
