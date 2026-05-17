@@ -287,3 +287,22 @@ ul {
     grid-template-columns: 1fr;
   }
 }
+
+/* Performance: promote animated elements to their own compositor layer */
+[style*="transform"],
+[style*="opacity"] {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

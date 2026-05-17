@@ -1,14 +1,15 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Star, Heart, Users, Target, Eye, Footprints } from 'lucide-react'
+import { fadeSide } from '../../lib/variants'
 import PageHero from '../../components/PageHero/PageHero'
 import styles from './About.module.css'
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
+const fadeUpLocal = {
+  hidden: { opacity: 0, y: 24 },
   visible: (i = 0) => ({
     opacity: 1, y: 0,
-    transition: { duration: 0.6, delay: i * 0.1 },
+    transition: { duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] },
   }),
 }
 
@@ -55,10 +56,10 @@ export default function About() {
         <div className={styles.storyGrid}>
           <motion.div
             className={styles.storyImg}
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            variants={fadeSide}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className={styles.storyImgMain}>
               <img src="/ballet-class.png" alt="Ballet class" />
@@ -75,10 +76,10 @@ export default function About() {
 
           <motion.div
             className={styles.storyText}
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            variants={fadeSide}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
           >
             <p className="section-label">Our Story</p>
             <h2 className="section-title">Built on <span>Passion</span> for Dance</h2>
@@ -111,10 +112,10 @@ export default function About() {
               key={a.label}
               className={styles.achievementItem}
               custom={i}
-              variants={fadeUp}
+              variants={fadeUpLocal}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.15 }}
             >
               <div className={styles.achievementNum}>{a.num}</div>
               <div className={styles.achievementLabel}>{a.label}</div>
@@ -128,10 +129,10 @@ export default function About() {
         <div className={styles.missionGrid}>
           <motion.div
             className={styles.missionCard}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className={styles.missionIcon}><Target size={32} /></div>
             <h3 className={styles.missionTitle}>Our Mission</h3>
@@ -142,10 +143,10 @@ export default function About() {
           </motion.div>
           <motion.div
             className={styles.missionCard}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className={styles.missionIcon}><Eye size={32} /></div>
             <h3 className={styles.missionTitle}>Our Vision</h3>
@@ -172,10 +173,10 @@ export default function About() {
               key={inst.name}
               className={styles.instructorCard}
               custom={i}
-              variants={fadeUp}
+              variants={fadeUpLocal}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.15 }}
             >
               <div className={styles.instructorImgWrap}>
                 <img src={inst.img} alt={inst.name} />
@@ -202,10 +203,10 @@ export default function About() {
               key={p.title}
               className={styles.philosophyCard}
               custom={i}
-              variants={fadeUp}
+              variants={fadeUpLocal}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               whileHover={{ scale: 1.03 }}
             >
               <span className={styles.philosophyIcon}>{p.icon}</span>

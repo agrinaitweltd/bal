@@ -2,16 +2,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { GraduationCap, Music2, Users, Trophy, Check, Music } from 'lucide-react'
+import { fadeUp, fadeSide, slideNext } from '../../lib/variants'
 import styles from './Home.module.css'
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: i * 0.1, ease: 'easeOut' },
-  }),
-}
 
 const classes = [
   { tag: 'Ballet', title: 'Baby Ballet', desc: 'Gentle introduction to ballet for little ones from 18 months.', img: '/ballet-class.png' },
@@ -68,9 +60,9 @@ export default function Home() {
           <div className={styles.heroText}>
             <motion.h1
               className={styles.heroTitle}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              transition={{ duration: 0.65, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             >
               Where Little Dancers{' '}
               <span className={styles.heroTitleSpan}>Find Their Stage</span>
@@ -78,9 +70,9 @@ export default function Home() {
 
             <motion.p
               className={styles.heroSubtitle}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.5 }}
+              transition={{ duration: 0.55, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
               Goodfoot Ballet Dance & Music Academy — nurturing talent, building confidence,
               and celebrating movement in Kampala since our founding.
@@ -88,9 +80,9 @@ export default function Home() {
 
             <motion.div
               className={styles.heroActions}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
+              transition={{ duration: 0.5, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
             >
               <Link to="/classes" className="btn btn-secondary">Explore Classes</Link>
               <Link to="/contact" className="btn btn-outline-white">Book a Free Trial</Link>
@@ -99,9 +91,9 @@ export default function Home() {
 
           <motion.div
             className={styles.heroImgWrapper}
-            initial={{ opacity: 0, x: 60 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, delay: 0.4 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className={styles.heroImg}>
               <img src="/hero-ballet.png" alt="Ballet dancer" />
@@ -150,10 +142,10 @@ export default function Home() {
         <div className={styles.aboutGrid}>
           <motion.div
             className={styles.aboutImgGroup}
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            variants={fadeSide}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className={styles.aboutImgMain}>
               <img src="/kids-dance.png" alt="Kids dancing" />
@@ -173,10 +165,10 @@ export default function Home() {
 
           <motion.div
             className={styles.aboutText}
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            variants={fadeSide}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
           >
             <p className="section-label">About Us</p>
             <h2 className="section-title">
@@ -248,10 +240,10 @@ export default function Home() {
       <section className={styles.whySection}>
         <div className={styles.whyGrid}>
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            variants={fadeSide}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
           >
             <p className="section-label">Why Goodfoot?</p>
             <h2 className="section-title" style={{ marginBottom: '2rem' }}>
@@ -278,10 +270,10 @@ export default function Home() {
 
           <motion.div
             className={styles.whyImg}
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            variants={fadeSide}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className={styles.whyImgMain}>
               <img src="/dance-performance.png" alt="Dance performance" />
@@ -304,10 +296,7 @@ export default function Home() {
               <motion.div
                 key={activeTestimonial}
                 className={styles.testimonialCard}
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -40 }}
-                transition={{ duration: 0.5 }}
+                {...slideNext}
               >
                 <div className={styles.testimonialImgWrap}>
                   <img src={testimonials[activeTestimonial].img} alt="Parent" />
@@ -343,10 +332,10 @@ export default function Home() {
       <section className={styles.ctaSection}>
         <div className={styles.ctaContent}>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           >
             <h2 className={styles.ctaTitle}>Ready to Find a Class Near You?</h2>
             <p className={styles.ctaText}>

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, MessageCircle, Check, Phone, Mail, Clock } from 'lucide-react'
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa6'
+import { fadeSide } from '../../lib/variants'
 import PageHero from '../../components/PageHero/PageHero'
 import styles from './Contact.module.css'
 
@@ -48,10 +49,10 @@ export default function Contact() {
           {/* Info Column */}
           <motion.div
             className={styles.infoCol}
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            variants={fadeSide}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
           >
             <div className={styles.infoCard}>
               <p className="section-label">Get In Touch</p>
@@ -107,10 +108,10 @@ export default function Contact() {
           {/* Form Column */}
           <motion.div
             className={styles.formCol}
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            variants={fadeSide}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
           >
             <div className={styles.formCard}>
               <h3 className={styles.formTitle}>Get in touch</h3>
