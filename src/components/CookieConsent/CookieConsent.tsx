@@ -25,18 +25,18 @@ export default function CookieConsent() {
   return (
     <AnimatePresence>
       {visible && (
-        <>
-          <motion.div
-            className={styles.backdrop}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          />
+        <motion.div
+          className={styles.backdrop}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={(e) => { if (e.target === e.currentTarget) accept('deny') }}
+        >
           <motion.div
             className={styles.panel}
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            initial={{ opacity: 0, scale: 0.94, y: 24 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            exit={{ opacity: 0, scale: 0.94, y: 24 }}
             transition={{ type: 'spring', damping: 28, stiffness: 320 }}
             role="dialog"
             aria-modal="true"
@@ -116,7 +116,7 @@ export default function CookieConsent() {
               </button>
             </div>
           </motion.div>
-        </>
+        </motion.div>
       )}
     </AnimatePresence>
   )

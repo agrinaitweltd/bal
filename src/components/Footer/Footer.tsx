@@ -164,7 +164,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className={styles.footerBottom}>
         <p className={styles.copyright}>
-          All rights reserved Goodfoot Ballet Dance & Music Academy © 2025
+          All rights reserved Goodfoot Ballet Dance & Music Academy © 2026
         </p>
         <p className={styles.madeWith}>
           Made & Designed By <a href="https://www.kavotevh.uk" target="_blank" rel="noopener noreferrer">Kavo Technologies</a>
