@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+import CookieConsent from './components/CookieConsent/CookieConsent'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Classes from './pages/Classes/Classes'
@@ -35,6 +36,7 @@ function App() {
         <AnimatedRoutes />
       </main>
       <Footer />
+      <CookieConsent />
     </Router>
   )
 }

@@ -82,57 +82,83 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu — partial right-side slide-in */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
-            className={styles.mobileMenu}
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.4, ease: 'easeInOut' }}
-          >
-            <button
-              className={styles.mobileClose}
-              onClick={() => setMenuOpen(false)}
-              aria-label="Close menu"
-            >
-              ✕
-            </button>
-            {navItems.map((item, i) => (
-              <motion.div
-                key={item.path}
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.08, duration: 0.4 }}
-              >
-                <NavLink
-                  to={item.path}
-                  end={item.path === '/'}
-                  className={({ isActive }) =>
-                    `${styles.mobileNavLink} ${isActive ? styles.active : ''}`
-                  }
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.label}
-                </NavLink>
-              </motion.div>
-            ))}
+          <>
+            {/* Backdrop */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              className={styles.mobileBackdrop}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setMenuOpen(false)}
+            />
+
+            {/* Panel */}
+            <motion.div
+              className={styles.mobileMenu}
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
             >
-              <Link
-                to="/contact"
-                className="btn btn-secondary"
-                style={{ marginTop: '1rem' }}
+              {/* Nav links area */}
+              <div className={styles.mobileMenuInner}>
+                <div className={styles.mobileMenuLogo}>
+                  <img src="/logo.png" alt="Goodfoot" className={styles.mobileMenuLogoImg} />
+                  <span className={styles.mobileMenuLogoName}>Goodfoot</span>
+                </div>
+
+                <nav className={styles.mobileNavList}>
+                  {navItems.map((item, i) => (
+                    <motion.div
+                      key={item.path}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.05 + i * 0.06, duration: 0.35 }}
+                    >
+                      <NavLink
+                        to={item.path}
+                        end={item.path === '/'}
+                        className={({ isActive }) =>
+                          `${styles.mobileNavLink} ${isActive ? styles.active : ''}`
+                        }
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {item.label}
+                      </NavLink>
+                    </motion.div>
+                  ))}
+                </nav>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.45 }}
+                  className={styles.mobileMenuCta}
+                >
+                  <Link
+                    to="/contact"
+                    className="btn btn-secondary"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Book a Class
+                  </Link>
+                </motion.div>
+              </div>
+
+              {/* Green close strip on right edge */}
+              <button
+                className={styles.mobileClose}
                 onClick={() => setMenuOpen(false)}
+                aria-label="Close menu"
               >
-                Book a Class
-              </Link>
+                <span className={styles.mobileCloseX}>✕</span>
+              </button>
             </motion.div>
-          </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>

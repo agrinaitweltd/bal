@@ -1,0 +1,183 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1100;
+}
+
+.panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 1.25rem 1.25rem 0 0;
+  z-index: 1101;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.18);
+
+  /* On desktop: show as a centred card instead of full-width sheet */
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  border-bottom: 1.5px solid #e5e7eb;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tab {
+  flex: 1;
+  padding: 1rem 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6b7280;
+  background: none;
+  border: none;
+  border-bottom: 2.5px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: -1.5px;
+}
+
+.tab:hover {
+  color: var(--color-turquoise-dark, #0097a7);
+}
+
+.tabActive {
+  color: var(--color-turquoise-dark, #0097a7);
+  border-bottom-color: var(--color-turquoise-dark, #0097a7);
+  font-weight: 600;
+}
+
+/* Body */
+.body {
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.875rem;
+}
+
+.text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+/* Necessary toggle row */
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0 0.5rem;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 0.75rem;
+}
+
+.toggleLabel {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Toggle pill */
+.toggle {
+  width: 52px;
+  height: 28px;
+  border-radius: 9999px;
+  background: #d1d5db;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  transition: background 0.25s ease;
+}
+
+.toggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease;
+}
+
+.toggleOn {
+  background: var(--color-turquoise-dark, #0097a7);
+}
+
+.toggleOn::after {
+  transform: translateX(24px);
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem 2rem;
+}
+
+.btnDeny,
+.btnSelection,
+.btnAll {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 0.625rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnDeny {
+  background: white;
+  color: #374151;
+  border: 1.5px solid #d1d5db;
+}
+
+.btnDeny:hover {
+  border-color: #9ca3af;
+  background: #f9fafb;
+}
+
+.btnSelection {
+  background: white;
+  color: var(--color-turquoise-dark, #0097a7);
+  border: 2px solid var(--color-turquoise-dark, #0097a7);
+}
+
+.btnSelection:hover {
+  background: var(--color-turquoise-pale, #e0f7fa);
+}
+
+.btnAll {
+  background: var(--color-turquoise-dark, #0097a7);
+  color: white;
+  border: none;
+}
+
+.btnAll:hover {
+  background: var(--color-turquoise, #00bcd4);
+  transform: translateY(-1px);
+}

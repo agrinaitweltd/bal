@@ -203,52 +203,105 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobile Menu */
+/* Mobile Menu — partial slide-in panel */
+.mobileBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 998;
+}
+
 .mobileMenu {
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 97, 100, 0.97);
-  backdrop-filter: blur(20px);
+  width: 72%;
+  max-width: 320px;
+  background: white;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  box-shadow: -8px 0 40px rgba(0, 0, 0, 0.25);
+}
+
+.mobileMenuInner {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  padding: 2.5rem 2rem;
+  overflow-y: auto;
+}
+
+.mobileMenuLogo {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  z-index: 999;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.mobileMenuLogoImg {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.mobileMenuLogoName {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-turquoise-dark);
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .mobileNavLink {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-charcoal);
   text-decoration: none;
-  transition: all 0.3s ease;
-  letter-spacing: 0.02em;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--color-light-gray);
+  transition: color 0.2s ease;
+  letter-spacing: 0.01em;
 }
 
 .mobileNavLink:hover,
 .mobileNavLink.active {
-  color: var(--color-turquoise-light);
-  transform: translateX(8px);
+  color: var(--color-turquoise-dark);
 }
 
+.mobileMenuCta {
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+/* Green close strip */
 .mobileClose {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  color: white;
-  font-size: 2rem;
+  width: 56px;
+  background: var(--color-turquoise-dark);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 1.4rem;
+  border: none;
   cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.3s;
+  flex-shrink: 0;
 }
 
-.mobileClose:hover {
-  opacity: 1;
+.mobileCloseX {
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1;
 }
 
 @media (max-width: 768px) {
