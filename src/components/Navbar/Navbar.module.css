@@ -208,7 +208,7 @@
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
-  z-index: 998;
+  z-index: 1001;
 }
 
 .mobileMenu {
@@ -219,7 +219,7 @@
   width: 72%;
   max-width: 320px;
   background: white;
-  z-index: 999;
+  z-index: 1002;
   display: flex;
   flex-direction: row;
   box-shadow: 8px 0 40px rgba(0, 0, 0, 0.25);
@@ -255,14 +255,14 @@
 .mobileNavLink {
   display: block;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 800;
   color: #1a4d2e;
   text-decoration: none;
-  padding: 1.1rem 0;
+  padding: 1.15rem 0;
   border-bottom: none;
   transition: color 0.2s ease;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.01em;
 }
 
 .mobileNavLink:hover,
@@ -277,8 +277,8 @@
 
 /* Green close strip */
 .mobileClose {
-  width: 56px;
-  background: var(--color-turquoise-dark);
+  width: 64px;
+  background: #1a7a3c;
   display: flex;
   align-items: flex-start;
   justify-content: center;
