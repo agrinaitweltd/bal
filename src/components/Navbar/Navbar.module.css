@@ -257,7 +257,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   font-weight: 800;
-  color: #1a4d2e;
+  color: var(--color-turquoise-dark);
   text-decoration: none;
   padding: 1.15rem 0;
   border-bottom: none;
@@ -275,10 +275,10 @@
   padding-top: 2rem;
 }
 
-/* Green close strip */
+/* Turquoise close strip */
 .mobileClose {
   width: 64px;
-  background: #1a7a3c;
+  background: var(--color-turquoise-dark);
   display: flex;
   align-items: flex-start;
   justify-content: center;
