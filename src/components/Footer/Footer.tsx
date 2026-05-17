@@ -167,7 +167,7 @@ export default function Footer() {
           All rights reserved Goodfoot Ballet Dance & Music Academy © 2025
         </p>
         <p className={styles.madeWith}>
-          Made with <span>♥</span> in Kampala
+          Made & Designed By <a href="https://www.kavotevh.uk" target="_blank" rel="noopener noreferrer">Kavo Technologies</a>
         </p>
       </div>
     </footer>
