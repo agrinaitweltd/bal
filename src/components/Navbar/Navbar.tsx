@@ -108,7 +108,6 @@ export default function Navbar() {
               <div className={styles.mobileMenuInner}>
                 <div className={styles.mobileMenuLogo}>
                   <img src="/logo.png" alt="Goodfoot" className={styles.mobileMenuLogoImg} />
-                  <span className={styles.mobileMenuLogoName}>Goodfoot</span>
                 </div>
 
                 <nav className={styles.mobileNavList}>
@@ -132,21 +131,6 @@ export default function Navbar() {
                     </motion.div>
                   ))}
                 </nav>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.45 }}
-                  className={styles.mobileMenuCta}
-                >
-                  <Link
-                    to="/contact"
-                    className="btn btn-secondary"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Book a Class
-                  </Link>
-                </motion.div>
               </div>
 
               {/* Green close strip on right edge */}
