@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { Footprints, Sparkles, Music, Activity, Mic2, Sprout, Trophy } from 'lucide-react'
 import PageHero from '../../components/PageHero/PageHero'
 import styles from './Classes.module.css'
 
@@ -13,7 +14,7 @@ const classCategories = [
     ageGroup: '18 months – Adult',
     schedule: 'Mon, Wed, Sat',
     price: 'From UGX 80,000/month',
-    emoji: '🩰',
+    emoji: <Footprints size={22} />,
     color: 'turquoise',
     levels: [
       { name: 'Baby Ballet', ages: '18 months – 3 yrs', desc: 'Imaginative movement and gentle ballet introduction.' },
@@ -30,7 +31,7 @@ const classCategories = [
     ageGroup: '4 – 16 years',
     schedule: 'Tue, Thu',
     price: 'From UGX 75,000/month',
-    emoji: '👟',
+    emoji: <Footprints size={22} />,
     color: 'pink',
     levels: [
       { name: 'Toe Tips', ages: 'Reception – Year 2', desc: 'First approach — very good fun with basic steps.' },
@@ -46,7 +47,7 @@ const classCategories = [
     ageGroup: '8 – Adult',
     schedule: 'Wed, Fri',
     price: 'From UGX 85,000/month',
-    emoji: '💫',
+    emoji: <Sparkles size={22} />,
     color: 'turquoise',
     levels: [
       { name: 'Contemporary Juniors', ages: '8 – 12 yrs', desc: 'Creative movement and body awareness.' },
@@ -62,7 +63,7 @@ const classCategories = [
     ageGroup: '4 – Adult',
     schedule: 'Mon – Sat (flexible)',
     price: 'From UGX 100,000/month',
-    emoji: '🎹',
+    emoji: <Music size={22} />,
     color: 'pink',
     levels: [
       { name: 'Beginners Piano', ages: '4+', desc: 'Fun, game-based introduction to keys and notes.' },
@@ -79,7 +80,7 @@ const classCategories = [
     ageGroup: '16+ years',
     schedule: 'Tue, Thu, Sat',
     price: 'From UGX 60,000/month',
-    emoji: '🏃',
+    emoji: <Activity size={22} />,
     color: 'turquoise',
     levels: [
       { name: 'Dance Cardio', ages: 'Adults', desc: 'Energetic cardio dance for all fitness levels.' },
@@ -95,7 +96,7 @@ const classCategories = [
     ageGroup: '5 – 15 years',
     schedule: 'Sat mornings',
     price: 'From UGX 70,000/month',
-    emoji: '🎭',
+    emoji: <Mic2 size={22} />,
     color: 'pink',
     levels: [
       { name: 'Drama Juniors', ages: '5 – 9 yrs', desc: 'Storytelling, movement, and imaginative play.' },
@@ -111,7 +112,7 @@ const classCategories = [
     ageGroup: 'All ages',
     schedule: 'Mon, Wed, Fri',
     price: 'From UGX 65,000/month',
-    emoji: '🌱',
+    emoji: <Sprout size={22} />,
     color: 'turquoise',
     levels: [
       { name: 'Absolute Beginners', ages: 'All ages', desc: 'Start from scratch in a supportive environment.' },
@@ -127,7 +128,7 @@ const classCategories = [
     ageGroup: '10 – Adult',
     schedule: 'Mon – Fri (intensive)',
     price: 'From UGX 150,000/month',
-    emoji: '🏆',
+    emoji: <Trophy size={22} />,
     color: 'pink',
     levels: [
       { name: 'Advanced Technique', ages: '10+', desc: 'Intensive training in technique and repertoire.' },

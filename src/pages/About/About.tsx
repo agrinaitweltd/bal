@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { Star, Heart, Users, Target, Eye, Footprints } from 'lucide-react'
 import PageHero from '../../components/PageHero/PageHero'
 import styles from './About.module.css'
 
@@ -34,10 +35,10 @@ const achievements = [
 ]
 
 const philosophy = [
-  { icon: '🌟', title: 'Nurture Every Talent', desc: 'We believe every child has a unique gift. Our role is to discover, develop, and celebrate it.' },
-  { icon: '❤️', title: 'Joy-First Learning', desc: 'Classes should be fun, uplifting, and joyful. Happy students learn faster and love dance deeper.' },
-  { icon: '🤝', title: 'Community & Family', desc: 'We\'re more than a dance school — we\'re a family that supports each other through every step.' },
-  { icon: '🎯', title: 'Excellence with Heart', desc: 'We pursue technical excellence while keeping the emotional and creative aspects of dance central.' },
+  { icon: <Star size={26} />, title: 'Nurture Every Talent', desc: 'We believe every child has a unique gift. Our role is to discover, develop, and celebrate it.' },
+  { icon: <Heart size={26} />, title: 'Joy-First Learning', desc: 'Classes should be fun, uplifting, and joyful. Happy students learn faster and love dance deeper.' },
+  { icon: <Users size={26} />, title: 'Community & Family', desc: 'We\'re more than a dance school — we\'re a family that supports each other through every step.' },
+  { icon: <Target size={26} />, title: 'Excellence with Heart', desc: 'We pursue technical excellence while keeping the emotional and creative aspects of dance central.' },
 ]
 
 export default function About() {
@@ -67,7 +68,7 @@ export default function About() {
               animate={{ rotate: [0, 5, -5, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
             >
-              <span className={styles.badgeIcon}>🩰</span>
+              <Footprints size={20} className={styles.badgeIcon} />
               <span className={styles.badgeText}>Est. 2012</span>
             </motion.div>
           </motion.div>
@@ -132,7 +133,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className={styles.missionIcon}>🎯</div>
+            <div className={styles.missionIcon}><Target size={32} /></div>
             <h3 className={styles.missionTitle}>Our Mission</h3>
             <p className={styles.missionText}>
               To provide exceptional dance and music education that builds confidence, discipline, 
@@ -146,7 +147,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <div className={styles.missionIcon}>🔭</div>
+            <div className={styles.missionIcon}><Eye size={32} /></div>
             <h3 className={styles.missionTitle}>Our Vision</h3>
             <p className={styles.missionText}>
               To become East Africa's leading performing arts academy, inspiring a generation of 

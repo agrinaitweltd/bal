@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 import styles from './Footer.module.css'
 
 const quickLinks = [
@@ -71,11 +72,6 @@ export default function Footer() {
         >
           <div className={styles.footerLogo}>
             <img src="/logo.png" alt="Goodfoot Academy" className={styles.footerLogoImg} />
-            <div className={styles.footerLogoText}>
-              <span className={styles.footerLogoName}>The Little</span>
-              <span className={styles.footerLogoNameBold}>Goodfoot</span>
-              <span className={styles.footerLogoSub}>Dance & Music Academy<sup className={styles.footerLogoTrademark}>®</sup></span>
-            </div>
           </div>
           <p className={styles.footerDesc}>
             Dance classes for your little ones and aspiring dancers of all ages in Kampala.
@@ -83,7 +79,7 @@ export default function Footer() {
           </p>
           <div className={styles.socialLinks}>
             <a href="#" className={styles.socialLink} aria-label="Facebook">f</a>
-            <a href="#" className={styles.socialLink} aria-label="Instagram">in</a>
+            <a href="#" className={styles.socialLink} aria-label="Instagram">ig</a>
             <a href="#" className={styles.socialLink} aria-label="Twitter">tw</a>
             <a href="#" className={styles.socialLink} aria-label="YouTube">yt</a>
           </div>
@@ -146,19 +142,19 @@ export default function Footer() {
         >
           <h4 className={styles.footerColTitle}>Contact Us</h4>
           <div className={styles.contactItem}>
-            <span className={styles.contactIcon}>📍</span>
+            <MapPin size={16} className={styles.contactIcon} />
             <span>Mawanda Rd, Kampala, Uganda</span>
           </div>
           <div className={styles.contactItem}>
-            <span className={styles.contactIcon}>📞</span>
+            <Phone size={16} className={styles.contactIcon} />
             <span>0764 335881</span>
           </div>
           <div className={styles.contactItem}>
-            <span className={styles.contactIcon}>✉️</span>
+            <Mail size={16} className={styles.contactIcon} />
             <span>info@goodfootacademy.ug</span>
           </div>
           <div className={styles.contactItem}>
-            <span className={styles.contactIcon}>🕐</span>
+            <Clock size={16} className={styles.contactIcon} />
             <span>Mon–Fri: 9AM–7PM<br />Sat–Sun: 10AM–5PM</span>
           </div>
         </motion.div>

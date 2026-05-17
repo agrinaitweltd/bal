@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { GraduationCap, Users, Star, Music, Lightbulb, Trophy } from 'lucide-react'
 import PageHero from '../../components/PageHero/PageHero'
 import styles from './Services.module.css'
 
 const services = [
   {
-    icon: '🎓',
+    icon: <GraduationCap size={28} />,
     title: 'Private Lessons',
     desc: 'One-on-one instruction tailored entirely to your goals. Private lessons allow for rapid progress and focused attention on individual strengths and areas for improvement.',
     features: ['Flexible scheduling', 'Personalised curriculum', 'Any age or level', 'Dance or music'],
@@ -13,7 +14,7 @@ const services = [
     img: '/ballet-teacher.png',
   },
   {
-    icon: '👥',
+    icon: <Users size={28} />,
     title: 'Group Classes',
     desc: 'Our vibrant group classes create a sense of community, teamwork, and shared joy. Students thrive in our energetic, carefully structured group sessions.',
     features: ['Ages 18 months+', 'Small class sizes', 'Social development', 'Affordable pricing'],
@@ -21,7 +22,7 @@ const services = [
     img: '/kids-dance.png',
   },
   {
-    icon: '🎪',
+    icon: <Star size={28} />,
     title: 'Event Performances',
     desc: 'We bring dance and music to your events! From school shows to corporate events and community celebrations, our students perform with confidence and grace.',
     features: ['Schools & colleges', 'Corporate events', 'Community shows', 'Wedding entertainment'],
@@ -29,7 +30,7 @@ const services = [
     img: '/dance-performance.png',
   },
   {
-    icon: '🎹',
+    icon: <Music size={28} />,
     title: 'Music Coaching',
     desc: 'Individual music coaching covering piano, rhythm, theory, and performance. Our music teachers nurture a lifelong love of music in every student.',
     features: ['Piano tuition', 'Music theory', 'Exam preparation', 'All ages welcome'],
@@ -37,7 +38,7 @@ const services = [
     img: '/music-class.png',
   },
   {
-    icon: '💡',
+    icon: <Lightbulb size={28} />,
     title: 'Dance Workshops',
     desc: 'Intensive workshops that dive deep into specific dance styles, techniques, or themes. Perfect for school groups, birthday parties, or holiday programmes.',
     features: ['Holiday programmes', 'School workshops', 'Birthday parties', 'Guest choreographers'],
@@ -45,7 +46,7 @@ const services = [
     img: '/academy-gallery-1.png',
   },
   {
-    icon: '🏆',
+    icon: <Trophy size={28} />,
     title: 'Competition Preparation',
     desc: 'For ambitious dancers ready to compete, we offer dedicated preparation coaching — from choreography and costume guidance to mental performance strategies.',
     features: ['Solo choreography', 'Group routines', 'Stage coaching', 'Competition travel support'],

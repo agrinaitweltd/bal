@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import { GraduationCap, Music2, Users, Trophy, Check, Music } from 'lucide-react'
 import styles from './Home.module.css'
 
 const fadeUp = {
@@ -49,10 +50,10 @@ const galleryImages = [
 ]
 
 const whyCards = [
-  { icon: '🩰', title: 'Expert Instructors', desc: 'Qualified, passionate teachers with years of professional experience.' },
-  { icon: '🎵', title: 'Music Integration', desc: 'Unique blend of dance and music education for holistic development.' },
-  { icon: '⭐', title: 'All Ages Welcome', desc: 'Classes tailored for everyone from toddlers to adults.' },
-  { icon: '🏆', title: 'Award Winning', desc: 'Recognized excellence in dance education across Uganda.' },
+  { icon: <GraduationCap size={28} />, title: 'Expert Instructors', desc: 'Qualified, passionate teachers with years of professional experience.' },
+  { icon: <Music2 size={28} />, title: 'Music Integration', desc: 'Unique blend of dance and music education for holistic development.' },
+  { icon: <Users size={28} />, title: 'All Ages Welcome', desc: 'Classes tailored for everyone from toddlers to adults.' },
+  { icon: <Trophy size={28} />, title: 'Award Winning', desc: 'Recognized excellence in dance education across Uganda.' },
 ]
 
 export default function Home() {
@@ -65,16 +66,6 @@ export default function Home() {
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
-            <motion.div
-              className={styles.heroLabel}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <span className={styles.heroDot} />
-              Welcome to Kampala's Premier Dance Academy
-            </motion.div>
-
             <motion.h1
               className={styles.heroTitle}
               initial={{ opacity: 0, y: 40 }}
@@ -115,17 +106,7 @@ export default function Home() {
             <div className={styles.heroImg}>
               <img src="/hero-ballet.png" alt="Ballet dancer" />
             </div>
-            <motion.div
-              className={styles.heroFloat1}
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              <span className={styles.floatIcon}>🩰</span>
-              <div>
-                <div className={styles.floatNum}>500+</div>
-                <div className={styles.floatLabel}>Happy Students</div>
-              </div>
-            </motion.div>
+
             <motion.div
               className={styles.heroFloat2}
               animate={{ y: [0, 8, 0] }}
@@ -185,7 +166,7 @@ export default function Home() {
               animate={{ scale: [1, 1.04, 1] }}
               transition={{ duration: 2.5, repeat: Infinity }}
             >
-              <span className={styles.aboutBadgeNum}>🎵</span>
+              <Music size={22} className={styles.aboutBadgeNum} />
               <span className={styles.aboutBadgeText}>Music & Dance</span>
             </motion.div>
           </motion.div>
@@ -215,7 +196,7 @@ export default function Home() {
                 'Regular recitals and performances',
               ].map((feat) => (
                 <li key={feat} className={styles.featureItem}>
-                  <span className={styles.featureCheck}>✓</span>
+                  <Check size={15} className={styles.featureCheck} />
                   {feat}
                 </li>
               ))}
@@ -398,7 +379,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <img src={img.src} alt={img.alt} />
-              <div className={styles.galleryItemOverlay}>🩰</div>
+              <div className={styles.galleryItemOverlay} />
             </motion.div>
           ))}
         </div>

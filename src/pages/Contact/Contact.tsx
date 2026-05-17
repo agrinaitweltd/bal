@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { MapPin, MessageCircle, Check } from 'lucide-react'
 import PageHero from '../../components/PageHero/PageHero'
 import styles from './Contact.module.css'
 
@@ -78,7 +79,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className={`btn btn-secondary ${styles.whatsappBtn}`}
               >
-                <span>💬</span> Chat on WhatsApp
+                <MessageCircle size={18} /> Chat on WhatsApp
               </a>
 
               {/* Social Links */}
@@ -86,7 +87,7 @@ export default function Contact() {
                 <p className={styles.socialLabel}>Follow Us</p>
                 <div className={styles.socialLinks}>
                   <a href="#" className={styles.socialLink} aria-label="Facebook">f</a>
-                  <a href="#" className={styles.socialLink} aria-label="Instagram">in</a>
+                  <a href="#" className={styles.socialLink} aria-label="Instagram">ig</a>
                   <a href="#" className={styles.socialLink} aria-label="YouTube">yt</a>
                 </div>
               </div>
@@ -95,7 +96,7 @@ export default function Contact() {
             {/* Map Placeholder */}
             <div className={styles.mapPlaceholder}>
               <div className={styles.mapOverlay}>
-                <span className={styles.mapIcon}>📍</span>
+              <MapPin size={32} className={styles.mapIcon} />
                 <p className={styles.mapText}>Mawanda Rd, Kampala</p>
                 <p className={styles.mapSub}>Map integration coming soon</p>
               </div>
@@ -119,7 +120,7 @@ export default function Contact() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                 >
-                  <div className={styles.successIcon}>✓</div>
+                  <div className={styles.successIcon}><Check size={28} strokeWidth={3} /></div>
                   <h4 className={styles.successTitle}>Message Sent!</h4>
                   <p className={styles.successText}>
                     Thank you for getting in touch. We'll get back to you within 24 hours.
