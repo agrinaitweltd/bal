@@ -819,3 +819,23 @@
     border-bottom: 1px solid rgba(255,255,255,0.2);
   }
 }
+
+@media (max-width: 480px) {
+  .heroContent {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .heroActions a {
+    text-align: center;
+  }
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}

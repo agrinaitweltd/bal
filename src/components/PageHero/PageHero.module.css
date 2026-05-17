@@ -52,3 +52,12 @@
   background: var(--color-white);
   clip-path: ellipse(55% 100% at 50% 100%);
 }
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 260px;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+  }
+}

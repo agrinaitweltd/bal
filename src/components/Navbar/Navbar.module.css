@@ -38,8 +38,8 @@
 }
 
 .logoImg {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -257,5 +257,18 @@
   }
   .navLinks {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoImg {
+    width: 52px;
+    height: 52px;
+  }
+  .logoName {
+    font-size: 1.2rem;
+  }
+  .logoSub {
+    font-size: 0.52rem;
   }
 }

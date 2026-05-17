@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, MessageCircle, Check } from 'lucide-react'
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa6'
 import PageHero from '../../components/PageHero/PageHero'
 import styles from './Contact.module.css'
 
@@ -86,9 +87,9 @@ export default function Contact() {
               <div className={styles.socialSection}>
                 <p className={styles.socialLabel}>Follow Us</p>
                 <div className={styles.socialLinks}>
-                  <a href="#" className={styles.socialLink} aria-label="Facebook">f</a>
-                  <a href="#" className={styles.socialLink} aria-label="Instagram">ig</a>
-                  <a href="#" className={styles.socialLink} aria-label="YouTube">yt</a>
+                  <a href="#" className={styles.socialLink} aria-label="Facebook"><FaFacebook /></a>
+                  <a href="#" className={styles.socialLink} aria-label="Instagram"><FaInstagram /></a>
+                  <a href="#" className={styles.socialLink} aria-label="YouTube"><FaYoutube /></a>
                 </div>
               </div>
             </div>

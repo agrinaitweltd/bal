@@ -234,3 +234,36 @@
     direction: ltr;
   }
 }
+
+@media (max-width: 768px) {
+  .classImg {
+    max-height: 280px;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+  }
+  .classImg img {
+    height: 280px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .classBlock {
+    gap: 1.5rem;
+  }
+  .classImg {
+    max-height: 260px;
+    overflow: hidden;
+  }
+  .classImg img {
+    height: 260px;
+    object-fit: cover;
+  }
+  .classBody {
+    padding: 1.5rem;
+  }
+  .classLevels {
+    gap: 0.5rem;
+  }
+}

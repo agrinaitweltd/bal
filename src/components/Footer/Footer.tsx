@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { FaFacebook, FaInstagram, FaXTwitter, FaYoutube } from 'react-icons/fa6'
 import styles from './Footer.module.css'
 
 const quickLinks = [
@@ -78,10 +79,10 @@ export default function Footer() {
             We nurture talent, build confidence, and celebrate movement.
           </p>
           <div className={styles.socialLinks}>
-            <a href="#" className={styles.socialLink} aria-label="Facebook">f</a>
-            <a href="#" className={styles.socialLink} aria-label="Instagram">ig</a>
-            <a href="#" className={styles.socialLink} aria-label="Twitter">tw</a>
-            <a href="#" className={styles.socialLink} aria-label="YouTube">yt</a>
+            <a href="#" className={styles.socialLink} aria-label="Facebook"><FaFacebook /></a>
+            <a href="#" className={styles.socialLink} aria-label="Instagram"><FaInstagram /></a>
+            <a href="#" className={styles.socialLink} aria-label="Twitter/X"><FaXTwitter /></a>
+            <a href="#" className={styles.socialLink} aria-label="YouTube"><FaYoutube /></a>
           </div>
         </motion.div>
 
