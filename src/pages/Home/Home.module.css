@@ -6,18 +6,14 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  background-image: url('/hero-ballet.png');
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, #006064 0%, #00ACC1 40%, #d4679a 100%);
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
 .heroOverlay {
-  position: absolute;
-  inset: 0;
-  background: var(--gradient-hero);
+  display: none;
 }
 
 .heroContent {
