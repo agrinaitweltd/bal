@@ -16,14 +16,8 @@ const fadeUpLocal = {
 const instructors = [
   {
     role: 'Principal & Founder',
-    name: 'Miss Grace Namukasa',
-    bio: 'Having performed across East Africa and trained internationally, Grace founded Goodfoot Academy with a mission to bring world-class dance education to Kampala. She holds qualifications from the Royal Academy of Dance (RAD) and is passionate about nurturing every child\'s potential.',
-    img: '/ballet-teacher.png',
-  },
-  {
-    role: 'Music Director',
-    name: 'Mr. David Ssemwanga',
-    bio: 'David studied music at Makerere University and brings over 15 years of piano teaching experience. His patient, creative approach inspires students of all ages to develop a lifelong love of music.',
+    name: 'Lugesera Vicent (Tr Bruce)',
+    bio: 'Lugesera Vicent, known as Tr Bruce, is a Royal Academy of Dance registered teacher who founded Good Foot Dance and Music Academy in June 2017. With a passion for nurturing the next generation of dancers, he brings world-class dance education to Uganda.',
     img: '/ballet-teacher.png',
   },
 ]
@@ -36,10 +30,9 @@ const achievements = [
 ]
 
 const philosophy = [
-  { icon: <Star size={26} />, title: 'Nurture Every Talent', desc: 'We believe every child has a unique gift. Our role is to discover, develop, and celebrate it.' },
-  { icon: <Heart size={26} />, title: 'Joy-First Learning', desc: 'Classes should be fun, uplifting, and joyful. Happy students learn faster and love dance deeper.' },
-  { icon: <Users size={26} />, title: 'Community & Family', desc: 'We\'re more than a dance school — we\'re a family that supports each other through every step.' },
-  { icon: <Target size={26} />, title: 'Excellence with Heart', desc: 'We pursue technical excellence while keeping the emotional and creative aspects of dance central.' },
+  { icon: <Star size={26} />, title: '01 — Innovation', desc: 'We strive to be creative in our thinking and to deliver dynamic solutions that make a difference to dance education.' },
+  { icon: <Heart size={26} />, title: '02 — Integrity', desc: 'We strive to always do the right thing.' },
+  { icon: <Users size={26} />, title: '03 — Passion', desc: 'We are dedicated to inspiring future generations of dancers and teachers.' },
 ]
 
 export default function About() {
@@ -70,7 +63,7 @@ export default function About() {
               transition={{ duration: 4, repeat: Infinity }}
             >
               <Footprints size={20} className={styles.badgeIcon} />
-              <span className={styles.badgeText}>Est. 2012</span>
+              <span className={styles.badgeText}>Est. 2017</span>
             </motion.div>
           </motion.div>
 
@@ -84,18 +77,14 @@ export default function About() {
             <p className="section-label">Our Story</p>
             <h2 className="section-title">Built on <span>Passion</span> for Dance</h2>
             <p className={styles.storyBody}>
-              Goodfoot Ballet Dance & Music Academy was born from a simple belief: that every child 
-              in Kampala deserves access to world-class dance and music education in a safe, 
-              nurturing environment.
+              Good Foot Dance and Music Academy was founded by Lugesera Vicent (Tr Bruce) in June 2017. 
+              A Royal Academy of Dance registered teacher, Tr Bruce established the Academy to offer unique 
+              classes designed to inspire the next generation of dancers to flourish and soar.
             </p>
             <p className={styles.storyBody}>
-              Founded on Mawanda Road, Kampala, we have grown from a small studio with a handful 
-              of students into one of Uganda's most respected performing arts academies. Our journey 
-              has been one of passion, dedication, and countless unforgettable moments on stage.
-            </p>
-            <p className={styles.storyBody}>
-              Today, we proudly serve over 500 students across ballet, tap, contemporary, drama, 
-              and music disciplines — and our mission remains as clear as ever.
+              We offer a comprehensive range of programs and services, tailored to meet the needs of 
+              students from beginner to advanced levels. Our faculty comprises highly qualified, 
+              industry-experienced professionals committed to delivering personalised instruction and mentorship.
             </p>
             <Link to="/contact" className="btn btn-primary" style={{ marginTop: '1.5rem' }}>
               Book a Free Trial
@@ -137,8 +126,9 @@ export default function About() {
             <div className={styles.missionIcon}><Target size={32} /></div>
             <h3 className={styles.missionTitle}>Our Mission</h3>
             <p className={styles.missionText}>
-              To provide exceptional dance and music education that builds confidence, discipline, 
-              creativity, and joy in every student — from their very first step to the concert stage.
+              Good Foot Ballet Dance and Music Academy is dedicated to providing exceptional dance and 
+              music education, fostering artistic excellence, and promoting a lifelong appreciation for 
+              the performing arts.
             </p>
           </motion.div>
           <motion.div
@@ -151,8 +141,8 @@ export default function About() {
             <div className={styles.missionIcon}><Eye size={32} /></div>
             <h3 className={styles.missionTitle}>Our Vision</h3>
             <p className={styles.missionText}>
-              To become East Africa's leading performing arts academy, inspiring a generation of 
-              dancers and musicians who carry the spirit of Goodfoot with them throughout their lives.
+              To be a centre of dance excellence in Africa; discovering, creating and nurturing 
+              well rounded individuals through dance, qualifications.
             </p>
           </motion.div>
         </div>
@@ -195,7 +185,7 @@ export default function About() {
       <section className={styles.philosophySection}>
         <div className={styles.sectionHeader}>
           <p className="section-label">Our Values</p>
-          <h2 className="section-title">Dance <span>Philosophy</span></h2>
+          <h2 className="section-title">Core <span>Values</span></h2>
         </div>
         <div className={styles.philosophyGrid}>
           {philosophy.map((p, i) => (

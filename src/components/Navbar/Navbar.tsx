@@ -43,7 +43,7 @@ export default function Navbar() {
             <img src="/logo.png" alt="Goodfoot Academy Logo" className={styles.logoImg} />
             <span className={styles.logoText}>
               <span className={styles.logoName}>Goodfoot</span>
-              <span className={styles.logoSub}>Ballet Dance & Music Academy</span>
+              <span className={styles.logoSub}>Dance and Music Academy</span>
             </span>
           </Link>
 

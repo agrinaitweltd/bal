@@ -74,8 +74,8 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
-              Goodfoot Ballet Dance & Music Academy — nurturing talent, building confidence,
-              and celebrating movement in Kampala since our founding.
+              Goodfoot Dance and Music Academy — nurturing talent, building confidence,
+              and celebrating movement in Kampala since 2017.
             </motion.p>
 
             <motion.div
