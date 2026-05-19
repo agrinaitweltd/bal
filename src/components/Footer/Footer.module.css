@@ -37,7 +37,7 @@
 }
 
 .footerLogoName {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.85rem;
   font-weight: 500;
   color: white;
@@ -47,7 +47,7 @@
 
 .footerLogoNameBold {
   display: block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2.75rem;
   font-weight: 900;
   color: white;
@@ -57,7 +57,7 @@
 }
 
 .footerLogoSub {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.85rem;
   font-weight: 500;
   color: white;
@@ -107,7 +107,7 @@
 
 /* Link columns */
 .footerColTitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.18em;
@@ -147,7 +147,7 @@
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
   transition: all 0.3s ease;
   color: #3d1f5c;
@@ -241,7 +241,7 @@
   background: rgba(255, 255, 255, 0.96);
   color: #374151;
   font-size: 0.9rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   outline: none;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
@@ -258,7 +258,7 @@
   border-radius: 9999px;
   font-size: 0.78rem;
   font-weight: 800;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
   letter-spacing: 0.12em;
