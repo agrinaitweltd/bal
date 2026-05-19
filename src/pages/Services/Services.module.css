@@ -83,7 +83,7 @@
 }
 
 .serviceTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--color-charcoal);
@@ -169,7 +169,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0 auto 1.25rem;
@@ -178,7 +178,7 @@
 }
 
 .stepTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--color-charcoal);

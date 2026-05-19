@@ -90,7 +90,7 @@
 }
 
 .achievementNum {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 3rem;
   font-weight: 700;
   line-height: 1;
@@ -134,7 +134,7 @@
 }
 
 .missionTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-charcoal);
@@ -207,7 +207,7 @@
 }
 
 .instructorName {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--color-charcoal);
@@ -255,7 +255,7 @@
 }
 
 .philosophyTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--color-charcoal);

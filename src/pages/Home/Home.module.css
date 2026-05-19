@@ -160,7 +160,7 @@
 
 /* ===== STATS BAR ===== */
 .statsBar {
-  background: var(--gradient-turquoise);
+  background: var(--color-charcoal);
   padding: 2.5rem 0;
   margin-top: -1px;
 }
@@ -186,10 +186,10 @@
 }
 
 .statNum {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--color-white);
+  font-weight: 800;
+  color: var(--color-turquoise);
   line-height: 1;
   margin-bottom: 0.25rem;
 }
@@ -270,7 +270,7 @@
 }
 
 .aboutBadgeNum {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
@@ -404,12 +404,12 @@
   color: var(--color-turquoise);
   background: var(--color-turquoise-pale);
   padding: 0.25rem 0.75rem;
-  border-radius: var(--radius-full);
+  border-radius: 0.25rem;
   margin-bottom: 0.625rem;
 }
 
 .classCardTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-charcoal);
@@ -472,7 +472,7 @@
 }
 
 .whyCardTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-charcoal);
