@@ -7,7 +7,6 @@ import styles from './Home.module.css'
 
 const classes = [
   { tag: 'Ballet', title: 'Baby Ballet', desc: 'Gentle introduction to ballet for little ones from 18 months.', img: '/ballet-class.png' },
-  { tag: 'Tap', title: "Tap Dance", desc: 'Energetic tap classes that build rhythm and coordination.', img: '/kids-dance.png' },
   { tag: 'Music', title: 'Piano Lessons', desc: 'Individual and group piano tuition for all skill levels.', img: '/music-class.png' },
   { tag: 'Contemporary', title: 'Contemporary Dance', desc: 'Expressive movement exploring modern dance techniques.', img: '/dance-performance.png' },
 ]
@@ -176,7 +175,7 @@ export default function Home() {
               <span>dance</span>
             </h2>
             <p className={styles.aboutBody}>
-              Whether your little dancer is a budding Ballet Bunny, a talented Tap performer, 
+              Whether your little dancer is a budding Ballet Bunny, a talented Contemporary dancer, 
               or an aspiring pianist — they will feel inspired at Goodfoot Academy. Our classes 
               are unforgettable, adventurous, and bursting with creativity.
             </p>

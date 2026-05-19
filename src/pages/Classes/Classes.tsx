@@ -22,22 +22,7 @@ const classCategories = [
       { name: 'Grade Ballet', ages: '5 – 8 yrs', desc: 'RAD graded syllabus for aspiring young dancers.' },
     ],
   },
-  {
-    id: 'tap',
-    tag: 'Tap',
-    title: 'Tap Dance',
-    desc: 'Does your child have happy feet? Our Tap classes build rhythm, coordination, and musicality through fun, progressive routines.',
-    img: '/kids-dance.png',
-    ageGroup: '4 – 16 years',
-    schedule: 'Tue, Thu',
-    price: 'From UGX 75,000/month',
-    emoji: <Footprints size={22} />,
-    color: 'pink',
-    levels: [
-      { name: 'Toe Tips', ages: 'Reception – Year 2', desc: 'First approach — very good fun with basic steps.' },
-      { name: 'Heel\'n Toe', ages: 'Year 3 – Year 6', desc: 'More advanced steps, routines, and techniques.' },
-    ],
-  },
+
   {
     id: 'contemporary',
     tag: 'Contemporary',
