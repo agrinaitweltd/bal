@@ -304,16 +304,11 @@
 }
 
 .featureCheck {
-  width: 24px;
-  height: 24px;
-  background: var(--color-turquoise-pale);
-  color: var(--color-turquoise);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 700;
+  display: inline-block;
+  width: 18px;
+  height: 3px;
+  background: var(--color-turquoise);
+  border-radius: 2px;
   flex-shrink: 0;
 }
 
@@ -332,8 +327,8 @@
 
 .classesGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -441,30 +436,50 @@
 }
 
 .whyCards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .whyCard {
   background: var(--color-off-white);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem 1.5rem;
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: 1.5rem 1.75rem;
+  border-left: 4px solid var(--color-turquoise-light);
   transition: all 0.3s ease;
-  border: 1px solid transparent;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0 1rem;
+  align-items: start;
+}
+
+.whyCard:nth-child(even) {
+  border-left-color: var(--color-pink-light);
 }
 
 .whyCard:hover {
   background: var(--color-white);
-  border-color: var(--color-turquoise-light);
+  border-left-color: var(--color-turquoise);
   box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
+  transform: translateX(4px);
 }
 
-.whyCardIcon {
-  font-size: 2rem;
-  margin-bottom: 0.875rem;
-  display: block;
+.whyCard:nth-child(even):hover {
+  border-left-color: var(--color-pink);
+}
+
+.whyCardNum {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-turquoise-light);
+  line-height: 1.4;
+  grid-row: span 2;
+  align-self: center;
+}
+
+.whyCard:nth-child(even) .whyCardNum {
+  color: var(--color-pink-light);
 }
 
 .whyCardTitle {

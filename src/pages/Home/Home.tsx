@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { GraduationCap, Music2, Users, Trophy, Check, Music } from 'lucide-react'
+import { Music } from 'lucide-react'
 import { fadeUp, fadeSide, slideNext } from '../../lib/variants'
 import styles from './Home.module.css'
 
@@ -41,10 +41,10 @@ const galleryImages = [
 ]
 
 const whyCards = [
-  { icon: <GraduationCap size={28} />, title: 'Expert Instructors', desc: 'Qualified, passionate teachers with years of professional experience.' },
-  { icon: <Music2 size={28} />, title: 'Music Integration', desc: 'Unique blend of dance and music education for holistic development.' },
-  { icon: <Users size={28} />, title: 'All Ages Welcome', desc: 'Classes tailored for everyone from toddlers to adults.' },
-  { icon: <Trophy size={28} />, title: 'Award Winning', desc: 'Recognized excellence in dance education across Uganda.' },
+  { title: 'Expert Instructors', desc: 'Qualified, passionate teachers with years of professional experience.' },
+  { title: 'Music Integration', desc: 'Unique blend of dance and music education for holistic development.' },
+  { title: 'All Ages Welcome', desc: 'Classes tailored for everyone from toddlers to adults.' },
+  { title: 'Award Winning', desc: 'Recognized excellence in dance education across Uganda.' },
 ]
 
 export default function Home() {
@@ -187,7 +187,7 @@ export default function Home() {
                 'Regular recitals and performances',
               ].map((feat) => (
                 <li key={feat} className={styles.featureItem}>
-                  <Check size={15} className={styles.featureCheck} />
+                  <span className={styles.featureCheck} />
                   {feat}
                 </li>
               ))}
@@ -259,7 +259,7 @@ export default function Home() {
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-                  <span className={styles.whyCardIcon}>{card.icon}</span>
+                  <span className={styles.whyCardNum}>0{i + 1}</span>
                   <h4 className={styles.whyCardTitle}>{card.title}</h4>
                   <p className={styles.whyCardDesc}>{card.desc}</p>
                 </motion.div>

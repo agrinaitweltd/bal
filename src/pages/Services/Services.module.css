@@ -55,31 +55,9 @@
   transform: scale(1.06);
 }
 
-.serviceIconBadge {
-  position: absolute;
-  bottom: -18px;
-  left: 1.5rem;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  box-shadow: var(--shadow-md);
-  border: 3px solid white;
-}
-
-.badge_turquoise {
-  background: var(--gradient-turquoise);
-}
-
-.badge_pink {
-  background: var(--gradient-pink);
-}
-
 .serviceBody {
-  padding: 2.25rem 1.5rem 1.75rem;
+  padding: 1.5rem;
+  border-top: 3px solid var(--color-turquoise-light);
 }
 
 .serviceTitle {

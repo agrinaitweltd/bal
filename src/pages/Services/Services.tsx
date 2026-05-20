@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { GraduationCap, Users, Star, Music, Lightbulb } from 'lucide-react'
 import PageHero from '../../components/PageHero/PageHero'
 import styles from './Services.module.css'
 
 type Subsection = { label: string; text: string }
 
 type Service = {
-  icon: React.ReactNode
   title: string
   subtitle?: string
   desc: string
@@ -19,7 +17,6 @@ type Service = {
 
 const services: Service[] = [
   {
-    icon: <GraduationCap size={28} />,
     title: '01 — Ballet',
     subtitle: 'Neoclassical Ballet & Contemporary',
     desc: 'Our Ballet classes follow the Royal Academy of Dance (RAD) Syllabus, where students are encouraged to work towards examinations from aged 5 years and above. This syllabus gives dancers a wonderful foundation to develop classical technique whilst enhancing their sense of performance. A variety of music is used in each class including traditional ballet extracts and well known songs.',
@@ -28,7 +25,6 @@ const services: Service[] = [
     img: '/service-ballet.png',
   },
   {
-    icon: <Star size={28} />,
     title: '02 — Examination',
     desc: 'Our clearly defined examination structure caters for all types of learners, whether they wish to progress to making dance purely as a leisure activity, all whilst taking place in the context of safe dance practice.',
     subsections: [
@@ -40,21 +36,18 @@ const services: Service[] = [
     img: '/service-examination.png',
   },
   {
-    icon: <Music size={28} />,
     title: '03 — Music',
     desc: 'Our trainer is a renowned professor of music, Professor Stanley, who plays over 14 instruments and is passionate about teaching how to sight read, sight write and sight sing. Classes available for Beginners, Intermediate and Advanced levels. Instruments include Recorder, Piano, Cello, Guitar, Violin and more.',
     color: 'turquoise',
     img: '/service-music.png',
   },
   {
-    icon: <Users size={28} />,
     title: '04 — Dance',
     desc: 'Experience the ultimate dance extravaganza with our diverse range of services, including foundational First Dance classes, high-energy Hip Hop sessions, Street Dance, expressive Contemporary and Modern Techniques, vibrant Afro and Amapiano styles. Programs designed to keep you moving and grooving!',
     color: 'pink',
     img: '/service-dance.png',
   },
   {
-    icon: <Lightbulb size={28} />,
     title: '05 — Rhythmic Gymnastics',
     desc: 'Aiming to build up progressively, ensuring that steps and skills learned at lower levels prepare for more complex movements as the candidate progresses.',
     color: 'pink',
@@ -126,9 +119,6 @@ export default function Services() {
             >
               <div className={styles.serviceImgWrap}>
                 <img src={svc.img} alt={svc.title} />
-                <div className={`${styles.serviceIconBadge} ${styles[`badge_${svc.color}`]}`}>
-                  {svc.icon}
-                </div>
               </div>
               <div className={styles.serviceBody}>
                 <h3 className={styles.serviceTitle}>{svc.title}</h3>
