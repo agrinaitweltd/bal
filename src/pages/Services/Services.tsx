@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { GraduationCap, Users, Star, Music, Lightbulb, Trophy } from 'lucide-react'
+import { GraduationCap, Users, Star, Music, Lightbulb } from 'lucide-react'
 import PageHero from '../../components/PageHero/PageHero'
 import styles from './Services.module.css'
 
@@ -54,15 +54,8 @@ const services: Service[] = [
     img: '/service-dance.png',
   },
   {
-    icon: <Trophy size={28} />,
-    title: '05 — Skating',
-    desc: 'Aiming to build up progressively, ensuring that steps and skills learned at lower levels prepare for more complex movements as the candidate progresses.',
-    color: 'turquoise',
-    img: '/service-skating.png',
-  },
-  {
     icon: <Lightbulb size={28} />,
-    title: '06 — Rhythmic Gymnastics',
+    title: '05 — Rhythmic Gymnastics',
     desc: 'Aiming to build up progressively, ensuring that steps and skills learned at lower levels prepare for more complex movements as the candidate progresses.',
     color: 'pink',
     img: '/service-gymnastics.png',
@@ -113,7 +106,7 @@ export default function Services() {
           <p className="section-label">What We Offer</p>
           <h2 className="section-title">World-Class Programmes for <span>Every Student</span></h2>
           <p className="section-subtitle">
-            From Ballet and Music to Street Dance, Skating and Rhythmic Gymnastics — Good Foot 
+            From Ballet and Music to Street Dance and Rhythmic Gymnastics — Good Foot 
             Dance and Music Academy offers expertly structured programmes for students of all ages and levels.
           </p>
         </motion.div>
