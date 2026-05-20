@@ -6,9 +6,9 @@ import { fadeUp, fadeSide, slideNext } from '../../lib/variants'
 import styles from './Home.module.css'
 
 const classes = [
-  { tag: 'Ballet', title: 'Baby Ballet', desc: 'Gentle introduction to ballet for little ones from 18 months.', img: '/ballet-class.png' },
-  { tag: 'Music', title: 'Piano Lessons', desc: 'Individual and group piano tuition for all skill levels.', img: '/music-class.png' },
-  { tag: 'Contemporary', title: 'Contemporary Dance', desc: 'Expressive movement exploring modern dance techniques.', img: '/dance-performance.png' },
+  { tag: 'Ballet', title: 'Baby Ballet', desc: 'Gentle introduction to ballet for little ones from 18 months.', img: '/home-class-ballet.png' },
+  { tag: 'Music', title: 'Piano Lessons', desc: 'Individual and group piano tuition for all skill levels.', img: '/home-class-music.png' },
+  { tag: 'Contemporary', title: 'Contemporary Dance', desc: 'Expressive movement exploring modern dance techniques.', img: '/home-class-contemporary.png' },
 ]
 
 const testimonials = [
@@ -16,13 +16,13 @@ const testimonials = [
     quote: 'Absolutely amazing...',
     text: 'Miss Katie gave my daughter so much confidence and joy! She\'s now a very happy, little dancer!',
     author: 'Olivia Czyzewska',
-    img: '/ballet-teacher.png',
+    img: '/testimonial-1.png',
   },
   {
     quote: 'Life changing for our family...',
     text: 'Goodfoot Academy has been incredible. My son loves every single class and has grown so much.',
     author: 'James Nkurunziza',
-    img: '/ballet-teacher.png',
+    img: '/testimonial-2.png',
   },
   {
     quote: 'Highly recommend to everyone!',
@@ -33,11 +33,11 @@ const testimonials = [
 ]
 
 const galleryImages = [
-  { src: '/academy-gallery-1.png', alt: 'Ballet performance' },
-  { src: '/academy-gallery-2.png', alt: 'Dance class' },
-  { src: '/kids-dance.png', alt: 'Kids dancing' },
-  { src: '/ballet-class.png', alt: 'Ballet class' },
-  { src: '/dance-performance.png', alt: 'Performance' },
+  { src: '/home-gallery-1.png', alt: 'Ballet performance' },
+  { src: '/home-gallery-2.png', alt: 'Dance class' },
+  { src: '/home-gallery-3.png', alt: 'Kids dancing' },
+  { src: '/home-gallery-4.png', alt: 'Ballet class' },
+  { src: '/home-gallery-5.png', alt: 'Performance' },
 ]
 
 const whyCards = [
@@ -95,7 +95,7 @@ export default function Home() {
             transition={{ duration: 0.65, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className={styles.heroImg}>
-              <img src="/hero-ballet.png" alt="Ballet dancer" />
+              <img src="/home-hero.png" alt="Ballet dancer" />
             </div>
 
             <motion.div
@@ -147,10 +147,10 @@ export default function Home() {
             viewport={{ once: true, amount: 0.2 }}
           >
             <div className={styles.aboutImgMain}>
-              <img src="/kids-dance.png" alt="Kids dancing" />
+              <img src="/home-about-main.png" alt="Kids dancing" />
             </div>
             <div className={styles.aboutImgSec}>
-              <img src="/ballet-class.png" alt="Ballet class" />
+              <img src="/home-about-secondary.png" alt="Ballet class" />
             </div>
             <motion.div
               className={styles.aboutImgBadge}
@@ -275,7 +275,7 @@ export default function Home() {
             viewport={{ once: true, amount: 0.2 }}
           >
             <div className={styles.whyImgMain}>
-              <img src="/dance-performance.png" alt="Dance performance" />
+              <img src="/home-why.png" alt="Dance performance" />
             </div>
             <div className={styles.whyImgDecor} />
             <div className={styles.whyImgDecor2} />

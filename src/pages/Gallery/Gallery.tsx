@@ -7,18 +7,18 @@ import styles from './Gallery.module.css'
 const categories = ['All', 'Ballet', 'Tap', 'Contemporary', 'Music', 'Performances']
 
 const galleryItems = [
-  { id: 1, src: '/ballet-class.png', alt: 'Ballet class session', category: 'Ballet', title: 'Ballet Class' },
-  { id: 2, src: '/kids-dance.png', alt: 'Kids dancing together', category: 'Ballet', title: 'Little Dancers' },
-  { id: 3, src: '/dance-performance.png', alt: 'Dance performance on stage', category: 'Performances', title: 'Annual Showcase' },
-  { id: 4, src: '/music-class.png', alt: 'Music lesson', category: 'Music', title: 'Piano Lesson' },
-  { id: 5, src: '/ballet-teacher.png', alt: 'Ballet teacher instruction', category: 'Ballet', title: 'Private Coaching' },
-  { id: 6, src: '/academy-gallery-1.png', alt: 'Academy gallery photo 1', category: 'Contemporary', title: 'Contemporary Workshop' },
-  { id: 7, src: '/academy-gallery-2.png', alt: 'Academy gallery photo 2', category: 'Tap', title: 'Tap Rehearsal' },
-  { id: 8, src: '/hero-ballet.png', alt: 'Hero ballet photo', category: 'Performances', title: 'End-of-Year Show' },
-  { id: 9, src: '/ballet-class.png', alt: 'Ballet class 2', category: 'Ballet', title: 'Barre Work' },
-  { id: 10, src: '/kids-dance.png', alt: 'Group dance', category: 'Contemporary', title: 'Group Routine' },
-  { id: 11, src: '/academy-gallery-1.png', alt: 'Academy event', category: 'Performances', title: 'Community Show' },
-  { id: 12, src: '/music-class.png', alt: 'Music class group', category: 'Music', title: 'Group Music' },
+  { id: 1, src: '/gallery-1.png', alt: 'Ballet class session', category: 'Ballet', title: 'Ballet Class' },
+  { id: 2, src: '/gallery-2.png', alt: 'Kids dancing together', category: 'Ballet', title: 'Little Dancers' },
+  { id: 3, src: '/gallery-3.png', alt: 'Dance performance on stage', category: 'Performances', title: 'Annual Showcase' },
+  { id: 4, src: '/gallery-4.png', alt: 'Music lesson', category: 'Music', title: 'Piano Lesson' },
+  { id: 5, src: '/gallery-5.png', alt: 'Ballet teacher instruction', category: 'Ballet', title: 'Private Coaching' },
+  { id: 6, src: '/gallery-6.png', alt: 'Contemporary workshop', category: 'Contemporary', title: 'Contemporary Workshop' },
+  { id: 7, src: '/gallery-7.png', alt: 'Street dance rehearsal', category: 'Contemporary', title: 'Street Dance Rehearsal' },
+  { id: 8, src: '/gallery-8.png', alt: 'End of year show', category: 'Performances', title: 'End-of-Year Show' },
+  { id: 9, src: '/gallery-9.png', alt: 'Barre work session', category: 'Ballet', title: 'Barre Work' },
+  { id: 10, src: '/gallery-10.png', alt: 'Group routine', category: 'Contemporary', title: 'Group Routine' },
+  { id: 11, src: '/gallery-11.png', alt: 'Community show', category: 'Performances', title: 'Community Show' },
+  { id: 12, src: '/gallery-12.png', alt: 'Group music class', category: 'Music', title: 'Group Music' },
 ]
 
 export default function Gallery() {
@@ -34,7 +34,7 @@ export default function Gallery() {
       <PageHero
         title="Our Gallery"
         subtitle="Moments of joy, passion, and artistic excellence"
-        image="/dance-performance.png"
+        image="/gallery-hero.png"
       />
 
       <section className={styles.gallerySection}>

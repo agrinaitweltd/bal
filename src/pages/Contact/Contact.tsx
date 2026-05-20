@@ -41,7 +41,7 @@ export default function Contact() {
       <PageHero
         title="Contact"
         subtitle="Get in touch — we'd love to hear from you"
-        image="/kids-dance.png"
+        image="/contact-hero.png"
       />
 
       <section className={styles.contactSection}>

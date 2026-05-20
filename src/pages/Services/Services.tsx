@@ -25,7 +25,7 @@ const services: Service[] = [
     desc: 'Our Ballet classes follow the Royal Academy of Dance (RAD) Syllabus, where students are encouraged to work towards examinations from aged 5 years and above. This syllabus gives dancers a wonderful foundation to develop classical technique whilst enhancing their sense of performance. A variety of music is used in each class including traditional ballet extracts and well known songs.',
     extra: 'The latest RAD syllabus also provides experience in Character work, where students learn traditional steps and movements from countries such as Russia, Hungary and Spain. Many of these styles are seen in classic ballets such as Swan Lake, Little Red Riding Hood and Snow White. The School offers RAD classes from Pre-primary level, where children from 3 years and over can attend.',
     color: 'turquoise',
-    img: '/ballet-class.png',
+    img: '/service-ballet.png',
   },
   {
     icon: <Star size={28} />,
@@ -37,35 +37,35 @@ const services: Service[] = [
       { label: 'Other', text: 'Some of our Dance Faculties offer types of qualifications other than those mentioned above. Please refer to individual syllabi for full details.' },
     ],
     color: 'pink',
-    img: '/dance-performance.png',
+    img: '/service-examination.png',
   },
   {
     icon: <Music size={28} />,
     title: '03 — Music',
     desc: 'Our trainer is a renowned professor of music, Professor Stanley, who plays over 14 instruments and is passionate about teaching how to sight read, sight write and sight sing. Classes available for Beginners, Intermediate and Advanced levels. Instruments include Recorder, Piano, Cello, Guitar, Violin and more.',
     color: 'turquoise',
-    img: '/music-class.png',
+    img: '/service-music.png',
   },
   {
     icon: <Users size={28} />,
     title: '04 — Dance',
     desc: 'Experience the ultimate dance extravaganza with our diverse range of services, including foundational First Dance classes, high-energy Hip Hop sessions, Street Dance, expressive Contemporary and Modern Techniques, vibrant Afro and Amapiano styles. Programs designed to keep you moving and grooving!',
     color: 'pink',
-    img: '/kids-dance.png',
+    img: '/service-dance.png',
   },
   {
     icon: <Trophy size={28} />,
     title: '05 — Skating',
     desc: 'Aiming to build up progressively, ensuring that steps and skills learned at lower levels prepare for more complex movements as the candidate progresses.',
     color: 'turquoise',
-    img: '/academy-gallery-1.png',
+    img: '/service-skating.png',
   },
   {
     icon: <Lightbulb size={28} />,
     title: '06 — Rhythmic Gymnastics',
     desc: 'Aiming to build up progressively, ensuring that steps and skills learned at lower levels prepare for more complex movements as the candidate progresses.',
     color: 'pink',
-    img: '/academy-gallery-2.png',
+    img: '/service-gymnastics.png',
   },
 ]
 
@@ -100,7 +100,7 @@ export default function Services() {
       <PageHero
         title="Programs & Services"
         subtitle="A comprehensive range of dance, music and gymnastics programmes for all ages"
-        image="/dance-performance.png"
+        image="/services-hero.png"
       />
 
       <section className={styles.introSection}>

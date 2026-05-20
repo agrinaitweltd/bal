@@ -10,7 +10,7 @@ const classCategories = [
     tag: 'Ballet',
     title: 'Ballet Classes',
     desc: 'The perfect introduction to ballet for little dancers. Our ballet programme follows RAD methodology, building technique, posture, and artistry from the ground up.',
-    img: '/ballet-class.png',
+    img: '/class-ballet.png',
     ageGroup: '18 months – Adult',
     schedule: 'Mon, Wed, Sat',
     price: 'From UGX 80,000/month',
@@ -28,7 +28,7 @@ const classCategories = [
     tag: 'Contemporary',
     title: 'Contemporary Dance',
     desc: 'Expressive and free-flowing, our contemporary classes explore modern dance vocabulary, improvisation, and choreography.',
-    img: '/dance-performance.png',
+    img: '/class-contemporary.png',
     ageGroup: '8 – Adult',
     schedule: 'Wed, Fri',
     price: 'From UGX 85,000/month',
@@ -44,7 +44,7 @@ const classCategories = [
     tag: 'Music',
     title: 'Piano Lessons',
     desc: 'Individual and group piano tuition for all skill levels. Our music programme integrates theory, technique, and performance practice.',
-    img: '/music-class.png',
+    img: '/class-music.png',
     ageGroup: '4 – Adult',
     schedule: 'Mon – Sat (flexible)',
     price: 'From UGX 100,000/month',
@@ -61,7 +61,7 @@ const classCategories = [
     tag: 'Fitness',
     title: 'Dance Fitness',
     desc: 'High-energy, fun workouts inspired by dance. Perfect for adults who want to stay fit while dancing to great music.',
-    img: '/academy-gallery-1.png',
+    img: '/class-fitness.png',
     ageGroup: '16+ years',
     schedule: 'Tue, Thu, Sat',
     price: 'From UGX 60,000/month',
@@ -77,7 +77,7 @@ const classCategories = [
     tag: 'Drama',
     title: 'Drama & Theatre',
     desc: 'Fuelled by adventure with carefully selected exercises designed to ignite your child\'s creativity, confidence, and communication.',
-    img: '/academy-gallery-2.png',
+    img: '/class-drama.png',
     ageGroup: '5 – 15 years',
     schedule: 'Sat mornings',
     price: 'From UGX 70,000/month',
@@ -93,7 +93,7 @@ const classCategories = [
     tag: 'Beginner',
     title: 'Beginner Programs',
     desc: 'Never danced before? No worries! Our beginner programmes are designed to welcome newcomers of all ages with zero pressure and maximum fun.',
-    img: '/ballet-class.png',
+    img: '/class-beginner.png',
     ageGroup: 'All ages',
     schedule: 'Mon, Wed, Fri',
     price: 'From UGX 65,000/month',
@@ -109,7 +109,7 @@ const classCategories = [
     tag: 'Advanced',
     title: 'Advanced Programs',
     desc: 'For dedicated dancers ready to take their skills to the next level — intensive training, competition preparation, and performance opportunities.',
-    img: '/dance-performance.png',
+    img: '/class-advanced.png',
     ageGroup: '10 – Adult',
     schedule: 'Mon – Fri (intensive)',
     price: 'From UGX 150,000/month',
@@ -128,7 +128,7 @@ export default function Classes() {
       <PageHero
         title="Our Classes"
         subtitle="Discover the perfect class for your child or yourself"
-        image="/kids-dance.png"
+        image="/classes-hero.png"
       />
 
       <section className={styles.introSection}>

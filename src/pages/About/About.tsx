@@ -18,7 +18,7 @@ const instructors = [
     role: 'Principal & Founder',
     name: 'Lugesera Vicent (Tr Bruce)',
     bio: 'Lugesera Vicent, known as Tr Bruce, is a Royal Academy of Dance registered teacher who founded Good Foot Dance and Music Academy in June 2017. With a passion for nurturing the next generation of dancers, he brings world-class dance education to Uganda.',
-    img: '/ballet-teacher.png',
+    img: '/about-instructor.png',
   },
 ]
 
@@ -41,7 +41,7 @@ export default function About() {
       <PageHero
         title="About Us"
         subtitle="Find out more about who we are and what we do"
-        image="/kids-dance.png"
+        image="/about-hero.png"
       />
 
       {/* Story Section */}
@@ -55,7 +55,7 @@ export default function About() {
             viewport={{ once: true, amount: 0.2 }}
           >
             <div className={styles.storyImgMain}>
-              <img src="/ballet-class.png" alt="Ballet class" />
+              <img src="/about-story.png" alt="Ballet class" />
             </div>
             <motion.div
               className={styles.storyBadge}
