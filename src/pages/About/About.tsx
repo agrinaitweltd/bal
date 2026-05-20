@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Star, Heart, Users, Target, Eye, Footprints } from 'lucide-react'
+import { Footprints } from 'lucide-react'
 import { fadeSide } from '../../lib/variants'
 import PageHero from '../../components/PageHero/PageHero'
 import styles from './About.module.css'
@@ -30,9 +30,9 @@ const achievements = [
 ]
 
 const philosophy = [
-  { icon: <Star size={26} />, title: '01 — Innovation', desc: 'We strive to be creative in our thinking and to deliver dynamic solutions that make a difference to dance education.' },
-  { icon: <Heart size={26} />, title: '02 — Integrity', desc: 'We strive to always do the right thing.' },
-  { icon: <Users size={26} />, title: '03 — Passion', desc: 'We are dedicated to inspiring future generations of dancers and teachers.' },
+  { title: '01 — Innovation', desc: 'We strive to be creative in our thinking and to deliver dynamic solutions that make a difference to dance education.' },
+  { title: '02 — Integrity', desc: 'We strive to always do the right thing.' },
+  { title: '03 — Passion', desc: 'We are dedicated to inspiring future generations of dancers and teachers.' },
 ]
 
 export default function About() {
@@ -123,7 +123,6 @@ export default function About() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className={styles.missionIcon}><Target size={32} /></div>
             <h3 className={styles.missionTitle}>Our Mission</h3>
             <p className={styles.missionText}>
               Good Foot Ballet Dance and Music Academy is dedicated to providing exceptional dance and 
@@ -138,7 +137,6 @@ export default function About() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className={styles.missionIcon}><Eye size={32} /></div>
             <h3 className={styles.missionTitle}>Our Vision</h3>
             <p className={styles.missionText}>
               To be a centre of dance excellence in Africa; discovering, creating and nurturing 
@@ -199,8 +197,8 @@ export default function About() {
               viewport={{ once: true, amount: 0.1 }}
               whileHover={{ scale: 1.03 }}
             >
-              <span className={styles.philosophyIcon}>{p.icon}</span>
-              <h4 className={styles.philosophyTitle}>{p.title}</h4>
+              <span className={styles.philosophyNum}>{p.title.slice(0, 2)}</span>
+              <h4 className={styles.philosophyTitle}>{p.title.slice(6)}</h4>
               <p className={styles.philosophyDesc}>{p.desc}</p>
             </motion.div>
           ))}

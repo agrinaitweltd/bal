@@ -121,38 +121,28 @@
   position: relative;
 }
 
-.processSteps::before {
-  content: '';
-  position: absolute;
-  top: 30px;
-  left: calc(12.5% + 30px);
-  right: calc(12.5% + 30px);
-  height: 2px;
-  background: linear-gradient(to right, var(--color-turquoise), var(--color-pink));
-  z-index: 0;
+.processStep {
+  padding: 1.5rem;
+  border-left: 3px solid var(--color-turquoise-light);
+  background: var(--color-white);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
 }
 
-.processStep {
-  text-align: center;
-  position: relative;
-  z-index: 1;
+.processStep:nth-child(even) {
+  border-left-color: var(--color-pink-light);
 }
 
 .stepNum {
-  width: 60px;
-  height: 60px;
-  background: var(--gradient-turquoise);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin: 0 auto 1.25rem;
-  box-shadow: var(--shadow-turquoise);
-  border: 3px solid white;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-turquoise-light);
+  line-height: 1;
+  margin-bottom: 0.875rem;
+}
+
+.processStep:nth-child(even) .stepNum {
+  color: var(--color-pink-light);
 }
 
 .stepTitle {
@@ -319,9 +309,6 @@
   }
   .processSteps {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .processSteps::before {
-    display: none;
   }
 }
 
